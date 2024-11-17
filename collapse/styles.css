@@ -1,0 +1,170 @@
+* {
+    cursor: none !important;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #1f93ff54;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 200px;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.button, .scroll-button {
+    padding: 15px 30px;
+    margin: 0 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #003366; /* Dark blue */
+}
+
+.button:hover, .scroll-button:hover {
+    background-color: #004d99; /* Lighter shade of blue */
+}
+
+.fade-out {
+   opacity: 0; 
+   transition: opacity .5s ease; 
+}
+
+.divider {
+   width: 100%; 
+   height: 5px; 
+   background-color: rgba(0,51,102,1); 
+   margin-bottom: 20px; 
+   opacity: 0; 
+   transform: scaleX(0); 
+   transition: opacity .5s ease, transform .5s ease; 
+}
+
+.divider.visible { 
+   opacity: 1; 
+   transform: scaleX(1); 
+}
+
+.scrollable-content { 
+   overflow-y:auto; 
+   max-height: calc(100vh - 300px); 
+   width:100%; 
+}
+
+.card-container { 
+   display:flex; 
+   flex-wrap : wrap; 
+   justify-content : center; 
+   gap :20px; 
+   width :100%; 
+   margin-top :20px; 
+}
+
+.card { 
+   width :250px; 
+   background-color:white; 
+   border-radius :10px; 
+   overflow:hidden; 
+   box-shadow :0 4px 6px rgba(0,0,0,.1); 
+}
+
+.card img { 
+   width :100%; 
+   height :150px; 
+   object-fit :cover; 
+}
+
+.card p {  
+   padding :15px;  
+   margin :0;  
+}
+
+/* Custom Alert Styles */
+.custom-alert {  
+     position :fixed;  
+     top :20px;  
+     right :-300px;  
+     width :250px;  
+     background-color:#003366;  
+     color:#fff;  
+     padding :15px ;  
+     border-radius :5px ;  
+     box-shadow :0 4px 6px rgba(0,0,0,.1);  
+     transition :right .3s ease ;  
+} 
+
+.custom-alert.show {  
+     right :20px ;  
+} 
+
+.alert-content {  
+     margin-bottom :10px ;  
+} 
+
+.alert-close {  
+     position :absolute ;  
+     top :5px ;  
+     right :10px ;  
+} 
+
+.alert-progress {  
+     position :absolute ;  
+     bottom :0 ;  
+     left :0 ;  
+     height :3px ;  
+} 
+
+#cursor-dot {  
+     position :fixed ;  
+     pointer-events :none ;  
+     width :15px ;  
+     height :15px ;  
+     border-radius :50% ;  
+     background-color :rgba(0,51,102,1);  
+     transition :transform .3s ease , opacity .3s ease ;  
+} 
+
+.scroll-button {   
+     position :fixed ;   
+     bottom :20px ;   
+     left :50%;   
+     transform :translateX(-50%);   
+     width :200px ;   
+     height :50px ;   
+     z-index :1000 ;   
+     cursor:pointer ;   
+     font-weight:bold ;   
+     border-radius :10px ;    
+} 
+
+.scroll-button:hover {    
+     transform :translateX(-50%) scale(1.05);    
+}
+
+/* Gallery Styles */
+.gallery {
+    display:flex ;
+    align-items:center ;
+    justify-content:center ;
+}
+
+.gallery-image {
+    width:auto; /* Adjust size as needed */
+}
